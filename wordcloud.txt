@@ -1,0 +1,18 @@
+Bioinformatics
+Statistics
+Networks
+BigData
+Expr Regulation
+Parallel Computing
+Bioidentification
+Bacteria
+Clustering
+Time mgmt
+Engineering
+Project Mgmt
+Unix
+Python
+Teaching
+Writing
+Prototyping
+Storytelling
