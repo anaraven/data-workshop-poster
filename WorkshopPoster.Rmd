@@ -14,15 +14,45 @@ Do you want to learn R for fun and science?
 
 Let's meet each week to speak and learn together.
 
-### What is needed?
-a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r wordcloud}
+```{r wordcloud, results='hide', fig.height=3.5, fig.align='center'}
 library(RColorBrewer)
 library(wordcloud)
+library(migest)
+par(mfrow=c(1,2))
 w <- read.delim("keywords.txt", header=FALSE, as.is=TRUE, col.names="words")
 pal <- brewer.pal(nrow(w), "Dark2")
 wordcloud(w$words, 50-nchar(w$words)-1:nrow(w)*3, rot.per=0.4, colors=pal[-1],
           random.order=FALSE, random.color=TRUE, fixed.asp=TRUE)
+demo(cfplot_reg, package = "migest", ask = FALSE)
 ```
 
+### What is needed?
+a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library(ggplot2)
+library(xkcd)
+gb <- read.delim("genbank-size.txt", stringsAsFactors=FALSE)
+ax <- with(gb, xkcdaxis(range(Release), range(WGS.Bases)))
+ax[[3]]$text$family <- "Humor Sans"
+
+n <- 2
+set.seed(123)
+twomen <-  xkcdman(mapping= aes(x,  y, scale, ratioxy, angleofspine, anglerighthumerus,
+                 anglelefthumerus, anglerightradius, angleleftradius, anglerightleg,
+                 angleleftleg, angleofneck),
+          data.frame(x=c(140, 196), y=c(6e11, 2.8E11), scale = 0.8e11,
+                     ratioxy = diff(range(gb$Release))/diff(range(gb$WGS.Bases)),
+                     angleofspine = runif(n, - pi/2 - pi/10, -pi/2 + pi/10),
+                     anglerighthumerus = runif(n, -pi/6- pi/10, - pi/6 + pi/10),
+                     anglelefthumerus = runif(n, pi + pi/6 -pi/10, pi + pi/6 + pi/10),
+                     anglerightradius =  runif(n, -pi/4, pi/4),
+                     angleleftradius =  runif(n, pi -pi/4, pi + pi/4),
+                     anglerightleg = runif(n,  3* pi/2 + pi/12 , 3* pi/2  + pi/12 + pi/10),
+                     angleleftleg = runif(n, 3* pi/2  - pi/12 - pi/10, 3* pi/2 - pi/12 ),
+                     angleofneck = runif(n, -pi/2-pi/10, -pi/2 + pi/10)))
+
+
+ggplot() + geom_text(aes(Release,WGS.Bases,label="0"), gb,family="Humor Sans",alpha=0.4) + ax + twomen
+
+```
