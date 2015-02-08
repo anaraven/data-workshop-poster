@@ -1,0 +1,28 @@
+---
+title: "Data Analysis Workshop"
+output:
+  html_document:
+    css: Simple.css
+    self_contained: no
+    theme: readable
+---
+
+## Introduction to R
+Do you have lots of data and don't know how to handle it?
+
+Do you want to learn R for fun and science?
+
+Let's meet each week to speak and learn together.
+
+### What is needed?
+a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r wordcloud}
+library(RColorBrewer)
+library(wordcloud)
+w <- read.delim("keywords.txt", header=FALSE, as.is=TRUE, col.names="words")
+pal <- brewer.pal(nrow(w), "Dark2")
+wordcloud(w$words, 50-nchar(w$words)-1:nrow(w)*3, rot.per=0.4, colors=pal[-1],
+          random.order=FALSE, random.color=TRUE, fixed.asp=TRUE)
+```
+
