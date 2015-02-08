@@ -2,9 +2,7 @@ R
 Bioinformatics
 Statistics
 Networks
-BigData
 Graphing
 Clustering
 Unix
 Python
-Writing
