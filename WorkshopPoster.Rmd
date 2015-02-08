@@ -4,7 +4,6 @@ output:
   html_document:
     css: Simple.css
     self_contained: no
-    theme: readable
 ---
 
 ```{r wordcloud, warning=FALSE, message=FALSE, fig.height=3, fig.align='center', echo=FALSE}
@@ -20,7 +19,7 @@ axes[[3]]$text$family <- "Humor Sans"
 twomen <-  xkcdman(mapping= aes(x,  y, scale, ratioxy, angleofspine, anglerighthumerus,
                  anglelefthumerus, anglerightradius, angleleftradius, anglerightleg,
                  angleleftleg, angleofneck),
-  data.frame(x = c(140, 196), y = c(6.0e+11, 2.8e+11), scale = 8e+10,
+  data.frame(x = c(140, 196), y = c(5.0e+11, 2.8e+11), scale = 8e+10,
     ratioxy = diff(range(gb$Release))/diff(range(gb$WGS.Bases)),
     angleofspine = c(-1.704265, -1.389649), anglerighthumerus = c(-0.5807903, -0.2829418),
     anglelefthumerus = c(3.941945, 3.379656), anglerightradius = c(0.0441480, 0.6164104),
@@ -35,7 +34,7 @@ pushViewport(vps$figure)
 vp1 <-plotViewport(c(0,0,0,0))
 p <- ggplot() + geom_text(aes(Release,WGS.Bases,label="0"), gb,
                        family="Humor Sans", alpha=0.8) + axes + twomen + 
-  xkcdline(aes(xbegin=145, ybegin=6e11, xend=160, yend=70e10), NULL, xjitteramount = 12) +
+  xkcdline(aes(xbegin=145, ybegin=5e11, xend=165, yend=65e10), NULL, xjitteramount = 10) +
   annotate("text",x=160, y=75e10, label="Genbank data\nkeeps growing!", family="Humor Sans")
 print(p, vp = vp1)
 ```
@@ -47,9 +46,9 @@ Do you want to learn R for fun and science?
 
 Let's meet each week to speak and learn together.
 
-### What do I needed?
+## What do I needed?
 Bring your computer, your data and good questions!
 
 Send an email to `andres.aravena@istanbul.edu.tr`
 
-> This poster was made using only R and HTML. Genbank data from `http://www.ncbi.nlm.nih.gov/genbank/statistics`
+> This poster is made using only R and HTML. Genbank data from `http://www.ncbi.nlm.nih.gov/genbank/statistics`
