@@ -1,9 +1,9 @@
-code{font-family:"American Typewriter"; border:none; font-size:1em; font-weight:400}
-blockquote{border-left-width:1px}
+code{font-family:"American Typewriter","Bitstream Charter"; border:none; font-size:1em; font-weight:600}
 p{font-family:"GoodDog",serif;
   font-size:28px;
   line-height:28px;
   text-align:center}
+blockquote p {font-size:18px}
 h1,h2,h3,h4,h5,h6{font-family:"TCLpapas",sans-serif;
 	font-weight:normal} 
 h1{color:#000;
@@ -18,7 +18,7 @@ h2{color:#111;
   -webkit-margin-after: 0.5em;
 }
 h1,h2,h3{text-align:center;
-	padding:.3em 0}
+	padding:0.1em 0 0.1em}
 h2,h3{border-top:solid 1px #ddd;
 	border-bottom:solid 1px #ddd}
 h2:before{content:"\2015  ";
