@@ -6,7 +6,9 @@ output:
     self_contained: no
 ---
 
-```{r wordcloud, warning=FALSE, message=FALSE, fig.height=3, fig.align='center', echo=FALSE}
+<script type="text/javascript" src="qrcodejs/qrcode.js"></script>
+
+```{r wordcloud, warning=FALSE, message=FALSE, fig.height=3, fig.align='center', echo=FALSE, cache=TRUE}
 library(wordcloud)
 library(gridBase)
 library(grid)
@@ -44,11 +46,18 @@ Do you have lots of data and don't know how to handle it?
 
 Do you want to learn R for fun and science?
 
-Let's meet each week to speak and learn together.
+Let's meet once each week to speak and learn together.
 
 ## What do I needed?
 Bring your computer, your data and good questions!
 
-Send an email to `andres.aravena@istanbul.edu.tr`
+Send an email with a short description of your project to `andres.aravena@istanbul.edu.tr`
+
+<div id="query" style="width:150px; height:150px; float:left"></div> 
 
 > This poster is made using only R and HTML. Genbank data from `http://www.ncbi.nlm.nih.gov/genbank/statistics`
+
+<script>
+var query = new QRCode(document.getElementById("query"), {width:200, height:200});
+query.makeCode("andres.aravena@istanbul.edu.tr");
+</script>
