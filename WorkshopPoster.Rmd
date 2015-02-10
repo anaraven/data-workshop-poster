@@ -48,7 +48,7 @@ Do you want to learn R for fun and science?
 
 Let's meet once each week to speak and learn together.
 
-## What do I needed?
+## What do I need?
 Bring your computer, your data and good questions!
 
 Send an email with a short description of your project to `andres.aravena@istanbul.edu.tr`
@@ -56,6 +56,11 @@ Send an email with a short description of your project to `andres.aravena@istanb
 <div id="query" style="width:150px; height:150px; float:left"></div> 
 
 > This poster is made using only R and HTML. Genbank data from `http://www.ncbi.nlm.nih.gov/genbank/statistics`
+>
+> <div class="official">Department of Molecular Biology and Genetics,  
+> Faculty of Sciences, Istanbul Unversity</div>
+
+<img src="IU_Logo_2.jpg" width="80px" height="80px" class="logo">
 
 <script>
 var query = new QRCode(document.getElementById("query"), {width:200, height:200});

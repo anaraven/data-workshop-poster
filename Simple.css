@@ -4,6 +4,12 @@ p{font-family:"GoodDog",serif;
   line-height:28px;
   text-align:center}
 blockquote p {font-size:18px}
+#logo {
+width: 80px;
+float: right;
+position: relative;
+top: -70px;
+}
 h1,h2,h3,h4,h5,h6{font-family:"TCLpapas",sans-serif;
 	font-weight:normal} 
 h1{color:#000;
