@@ -6,6 +6,8 @@ output:
     self_contained: no
 ---
 
+<img src="IU_Logo_2.jpg" width="80px" height="80px" id="logo">
+<div id="official">Department of Molecular Biology and Genetics,<br />Faculty of Sciences, Istanbul Unversity</div>
 <script type="text/javascript" src="qrcodejs/qrcode.js"></script>
 
 ```{r wordcloud, warning=FALSE, message=FALSE, fig.height=3, fig.align='center', echo=FALSE, cache=TRUE}
@@ -42,27 +44,28 @@ print(p, vp = vp1)
 ```
 
 ## Introduction to R
-Do you have lots of data and don't know how to handle it?
+Do you have lots of data and don't know how to handle it? *Yes!*
 
-Do you want to learn R for fun and science?
+Do you want to learn R for fun and science? *Yes!*
 
-Let's meet once each week to speak and learn together.
+Let's meet once each week to speak and learn together. *Ok!*
 
-## What do I need?
+### What do I need?
 Bring your computer, your data and good questions!
 
 Send an email with a short description of your project to `andres.aravena@istanbul.edu.tr`
 
-<div id="query" style="width:150px; height:150px; float:left"></div> 
+<div style="position:absolute">
+<div id="email" style="width:150px; height:150px; float:left"></div> 
 
-> This poster is made using only R and HTML. Genbank data from `http://www.ncbi.nlm.nih.gov/genbank/statistics`
+> More information in `http://anaraven.github.io/data-science-workshop/`
 >
-> <div class="official">Department of Molecular Biology and Genetics,  
-> Faculty of Sciences, Istanbul Unversity</div>
+> This poster is made using only R and HTML. Graphs made in R with real data.
 
-<img src="IU_Logo_2.jpg" width="80px" height="80px" class="logo">
+</div>
 
 <script>
-var query = new QRCode(document.getElementById("query"), {width:200, height:200});
-query.makeCode("andres.aravena@istanbul.edu.tr");
+var email = new QRCode(document.getElementById("email"),
+	{width:150, height:150});
+email.makeCode("http://anaraven.github.io/data-science-workshop/");
 </script>
