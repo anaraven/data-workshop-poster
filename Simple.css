@@ -4,10 +4,11 @@ code {
   font-size:1em;
   font-weight:600
 }
-em {
+strong {
   color: teal!important;
   position: absolute;
   right: 5px;
+  font-weight: normal;
 }
 h3 {
   text-align: center;
@@ -22,6 +23,7 @@ p {
   text-align:center}
 blockquote {
   float: left;
+  border:0!important;
   margin: 0;
   left: 150px;
   position: absolute;
@@ -36,9 +38,11 @@ blockquote p {
   z-index: -1;
 }
 .title {
-  padding-top: 0.5em;
+  padding-top: 1.5em;
 }
-#official {
+.author em {
+  font-family: serif;
+  font-style: normal;
   position: absolute;
   top: 0;
   left: 85px;
@@ -66,7 +70,7 @@ h2 {
 }
 h1,h2 {
   text-align:center;
-  padding:0.1em 0 0.1em}
+  padding:0.2em 0 0.2em}
 h2 {
   border-top:solid 1px #ddd;
   border-bottom:solid 1px #ddd

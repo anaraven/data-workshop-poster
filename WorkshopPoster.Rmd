@@ -1,5 +1,6 @@
 ---
 title: "Data Analysis Workshop"
+author: Department of Molecular Biology and Genetics,<br/>Faculty of Sciences, Istanbul Unversity
 output:
   html_document:
     css: Simple.css
@@ -7,7 +8,6 @@ output:
 ---
 
 <img src="IU_Logo_2.jpg" width="80px" height="80px" id="logo">
-<div id="official">Department of Molecular Biology and Genetics,<br />Faculty of Sciences, Istanbul Unversity</div>
 <script type="text/javascript" src="qrcodejs/qrcode.js"></script>
 
 ```{r wordcloud, warning=FALSE, message=FALSE, fig.height=3, fig.align='center', echo=FALSE, cache=TRUE}
@@ -44,11 +44,11 @@ print(p, vp = vp1)
 ```
 
 ## Introduction to R
-Do you have lots of data and don't know how to handle it? *Yes!*
+Do you have lots of data and don't know how to handle it? **Yes!**
 
-Do you want to learn R for fun and science? *Yes!*
+Do you want to learn R for fun and science? **Yes!**
 
-Let's meet once each week to speak and learn together. *Ok!*
+Let's meet once each week to speak and learn together. **Ok!**
 
 ### What do I need?
 Bring your computer, your data and good questions!
