@@ -1,0 +1,32 @@
+---
+title: "Untitled"
+author: "Andres Aravena"
+date: "10/03/2015"
+output:
+  html_document:
+    highlight: null
+    keep_md: yes
+    smart: no
+    theme: null
+---
+
+<script type="text/javascript" src="qrcodejs/qrcode.js"></script>
+
+
+```{r load, cache=TRUE, echo=FALSE}
+members <- read.csv("~/Src/data-workshop-poster/mbg-data-science-workshop.csv", header=TRUE, quote="\"", skip=1)
+members$id <- paste("id",1:nrow(members), sep="")
+```
+
+```{r list, echo=FALSE, results='asis'}
+paste('<p><div id=', members$id, ' class=qr></div>',members$Nickname,"</p>\n", sep="", collapse=" ")
+```
+
+<script>
+
+```{r script, echo=FALSE, results='asis'}
+paste('var ',members$id,' = new QRCode(document.getElementById("',members$id,'"), {width:150, height:150});\n',sep="", collapse=" ")
+paste(members$id,'.makeCode("', members$Email.address,'");\n',sep="", collapse=" ")
+```
+
+</script>
