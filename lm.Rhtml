@@ -1,0 +1,31 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<title></title>
+<link rel="stylesheet" href="list-members.css" type="text/css" />
+</head>
+
+<body>
+<script type="text/javascript" src="qrcodejs/qrcode.js"></script>
+<!--begin.rcode load, cache=FALSE, echo=FALSE
+members <- read.csv("~/Src/data-workshop-poster/mbg-data-science-workshop.csv", header=TRUE, quote="\"", skip=1)
+members$id <- paste("id",1:nrow(members), sep="")
+end.rcode-->
+
+<!--begin.rcode  list, echo=FALSE, results='asis'
+cat(paste('<div class=card><div id=', members$id, ' class=qr></div><div class=name>',members$Nickname,"</div></div>", sep="", collapse="\n"))
+end.rcode-->
+
+<script>
+<!--begin.rcode script, echo=FALSE, results='asis'
+cat(paste('var ',members$id,' = new QRCode(document.getElementById("',members$id,'"), {width:150, height:150});\n',
+          members$id,'.makeCode("', toupper(members$Email.address),'");', sep="", collapse="\n"))
+end.rcode-->
+</script>
+
+
+</body>
+</html>

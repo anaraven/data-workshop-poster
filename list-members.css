@@ -1,0 +1,14 @@
+.card {
+    position: relative;
+    display: block;
+    padding: 3mm;
+    border: black solid 1px;
+    margin-bottom: 4mm;
+}
+
+.name {
+  position: absolute;
+  top: 0mm;
+  left: 180px;
+  font-size: 70px;
+}
